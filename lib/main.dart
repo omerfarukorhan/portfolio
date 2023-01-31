@@ -25,3 +25,7 @@ class AppTheme extends StatelessWidget {
     );
   }
 }
+
+// DEPLOY COMMANDS
+// flutter build web --web-renderer html --base-href /
+// firebase deploy --only hosting
