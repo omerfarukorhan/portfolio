@@ -1,4 +1,4 @@
 # Visit the website
 
-[**me.omerfaruk.dev**](https://me.omerfaruk.dev)
+[**omerfaruk.dev**](https://omerfaruk.dev)
 
