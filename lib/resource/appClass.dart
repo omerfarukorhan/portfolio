@@ -12,7 +12,7 @@ class AppClass {
   ScrollController controller = ScrollController();
 
   static final resumeDownloadURL =
-      '''https://me.omerfaruk.dev/resume.pdf''';
+      '''https://omerfaruk.dev/resume.pdf''';
 
   factory AppClass() {
     return _mAppClass;
@@ -47,17 +47,17 @@ class AppClass {
     await launchUrl(Uri.parse(AppClass.resumeDownloadURL));
   }
 
-  alertDialog(context, title, msg) {
-    showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-                title: Text(title, style: TxtStyle().boldWhite(context)),
-                content: Text(msg),
-                actions: [
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(primary: Colors.green),
-                      onPressed: () => Navigator.pop(context),
-                      child: Text('Okay'))
-                ]));
-  }
+  // alertDialog(context, title, msg) {
+  //   showDialog(
+  //       context: context,
+  //       builder: (_) => AlertDialog(
+  //               title: Text(title, style: TxtStyle().boldWhite(context)),
+  //               content: Text(msg),
+  //               actions: [
+  //                 ElevatedButton(
+  //                     style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+  //                     onPressed: () => Navigator.pop(context),
+  //                     child: Text('Okay'))
+  //               ]));
+  // }
 }

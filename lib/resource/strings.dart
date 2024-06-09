@@ -23,9 +23,15 @@ class Strings {
 
   static final expCompName1 = '''Destek Bilisim''';
   static final expDesig1 = '''Mobile Application Developer''';
-  static final expDur1 = '''Sep 2021 - Present''';
+  static final expDur1 = '''Sep 2021 - May 2023''';
   static final expAbout1 =
-      '''Building accessible, human-centered Mobile products. ''';
+      '''Building accessible, human-centered mobile products. ''';
+
+  static final expCompName2 = '''Avicenna İleri Teknoloji''';
+  static final expDesig2 = '''Chief Technology Officer''';
+  static final expDur2 = '''Jul 2024 - Present''';
+  static final expAbout2 =
+      '''Building accessible, human-centered software products. ''';
 
   static final endTxt =
       '''Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!''';
