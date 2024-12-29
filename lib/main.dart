@@ -29,3 +29,6 @@ class AppTheme extends StatelessWidget {
 // DEPLOY COMMANDS
 // flutter build web --web-renderer html --base-href /
 // firebase deploy --only hosting
+
+// ## FOR FIREBASE SSL ERROR ##
+// Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass

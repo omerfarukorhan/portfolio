@@ -56,6 +56,42 @@ class _ExperienceState extends State<Experience> {
           ],
         ),
       ),
+       ExperienceModel(
+        desig: Strings.expDesig3,
+        compName: Strings.expCompName3,
+        duration: Strings.expDur3,
+        points: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: AppColors().neonColor,
+                      size: 20,
+                    ),
+                  ),
+                  Container(
+                    width: AppClass().getMqWidth(context) * 0.5,
+                    child: Text(
+                      Strings.expAbout3,
+                      style: TextStyle(
+                          color: AppColors().textLight,
+                          letterSpacing: 1,
+                          height: 1.5,
+                          fontSize: 13,
+                          fontFamily: 'sfmono'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       ExperienceModel(
         desig: Strings.expDesig1,
         compName: Strings.expCompName1,
