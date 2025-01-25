@@ -5,6 +5,7 @@ import 'package:portfolio/view/root.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
   runApp(ProviderScope(child: const AppTheme()));
 }
