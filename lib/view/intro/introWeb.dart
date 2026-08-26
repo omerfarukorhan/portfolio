@@ -7,9 +7,9 @@ import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
 class IntroWeb extends StatefulWidget {
-  AutoScrollController aScrollController;
+  final AutoScrollController aScrollController;
 
-  IntroWeb(this.aScrollController, {Key? key}) : super(key: key);
+  const IntroWeb(this.aScrollController, {super.key});
 
   @override
   State<IntroWeb> createState() => _IntroWebState();
@@ -96,7 +96,7 @@ class _IntroWebState extends State<IntroWeb> {
                 padding: EdgeInsets.only(top: 50, bottom: 70),
                 child: InkWell(
                   onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
+                    widget.aScrollController.scrollToIndex(3,
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
@@ -108,7 +108,7 @@ class _IntroWebState extends State<IntroWeb> {
                         border: Border.all(
                             color: AppColors().neonColor, width: 1.5)),
                     child: Center(
-                      child: Text('Check Out Me!',
+                      child: Text('View Selected Work',
                           style: TextStyle(
                               color: AppColors().neonColor,
                               fontSize: 13,

@@ -1,9 +1,9 @@
 class WorkModel {
-  String? projectTitle;
-  String? projectContent;
-  String? tech1;
-  String? tech2;
-  String? tech3;
+  final String? projectTitle;
+  final String? projectContent;
+  final String? tech1;
+  final String? tech2;
+  final String? tech3;
 
   WorkModel(
       {this.projectTitle,

@@ -1,9 +1,11 @@
 import 'dart:ui';
 
 class AppColors {
-  var primaryColor = const Color(0xff0a192e);
-  var textColor = const Color(0xffccd6f6);
-  var neonColor = const Color(0xff76eeda);
-  var textLight = const Color(0xff8892b0);
-  var cardColor = const Color(0xff112240);
+  const AppColors();
+
+  final Color primaryColor = const Color(0xff071426);
+  final Color textColor = const Color(0xffd6def6);
+  final Color neonColor = const Color(0xff64f5d2);
+  final Color textLight = const Color(0xff98a4c2);
+  final Color cardColor = const Color(0xff102440);
 }

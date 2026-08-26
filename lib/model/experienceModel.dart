@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 
 class ExperienceModel {
-  String? desig;
-  String? compName;
-  String? duration;
-  Widget? points;
+  final String? desig;
+  final String? compName;
+  final String? duration;
+  final Widget? points;
 
   ExperienceModel({this.desig, this.compName, this.duration, this.points});
 }

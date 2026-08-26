@@ -9,7 +9,7 @@ import '../../resource/strings.dart';
 class IntroMobile extends StatefulWidget {
   final AutoScrollController aScrollController;
 
-  IntroMobile(this.aScrollController, {Key? key}) : super(key: key);
+  const IntroMobile(this.aScrollController, {super.key});
 
   @override
   State<IntroMobile> createState() => _IntroMobileState();
@@ -96,7 +96,7 @@ class _IntroMobileState extends State<IntroMobile> {
                 padding: const EdgeInsets.only(top: 60.0),
                 child: InkWell(
                   onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
+                    widget.aScrollController.scrollToIndex(3,
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
@@ -108,7 +108,7 @@ class _IntroMobileState extends State<IntroMobile> {
                         border: Border.all(
                             color: AppColors().neonColor, width: 1.5)),
                     child: Center(
-                      child: Text('Check Out Me!',
+                      child: Text('View Selected Work',
                           style: TextStyle(
                               color: AppColors().neonColor,
                               fontSize: 13,

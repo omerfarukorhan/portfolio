@@ -1,13 +1,18 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/semantics.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:portfolio/resource/colors.dart';
 import 'package:portfolio/view/root.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  setPathUrlStrategy();
-  runApp(ProviderScope(child: const AppTheme()));
+  usePathUrlStrategy();
+  runApp(const ProviderScope(child: AppTheme()));
+  if (kIsWeb) {
+    SemanticsBinding.instance.ensureSemantics();
+  }
 }
 
 class AppTheme extends StatelessWidget {
@@ -16,11 +21,16 @@ class AppTheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Omer Faruk Orhan',
+      title: 'Ömer Faruk Orhan — Software Developer & MD',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: AppColors().primaryColor,
+        scaffoldBackgroundColor: AppColors().primaryColor,
+        colorScheme: ColorScheme.dark(
+          primary: AppColors().neonColor,
+          surface: AppColors().cardColor,
+        ),
       ),
       home: const RootScreen(),
     );

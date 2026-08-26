@@ -7,9 +7,9 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'introTab.dart';
 
 class IntroContent extends StatefulWidget {
-  AutoScrollController aScrollController;
+  final AutoScrollController aScrollController;
 
-  IntroContent(this.aScrollController, {Key? key}) : super(key: key);
+  const IntroContent(this.aScrollController, {super.key});
 
   @override
   State<IntroContent> createState() => _IntroContentState();

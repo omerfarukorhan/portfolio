@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,6 +52,29 @@ class _AboutMobileState extends State<AboutMobile> {
                 color: AppColors().textLight,
               )
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 28),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                width: 132,
+                height: 132,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: AppColors().neonColor, width: 1.2),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    alignment: const Alignment(0, -.35),
+                    colorFilter: ColorFilter.mode(
+                      AppColors().primaryColor.withValues(alpha: .28),
+                      BlendMode.color,
+                    ),
+                    image: const AssetImage('assets/svg/profilePic.jpeg'),
+                  ),
+                ),
+              ),
+            ),
           ),
           Row(
             children: [

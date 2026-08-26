@@ -1,27 +1,27 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:portfolio/resource/appClass.dart';
 
-class Responsive extends StatefulWidget {
-  var mobileView, webView, tabView;
+class Responsive extends StatelessWidget {
+  const Responsive({
+    super.key,
+    required this.mobileView,
+    required this.tabView,
+    required this.webView,
+  });
 
-  Responsive({Key? key, this.mobileView, this.tabView, this.webView})
-      : super(key: key);
+  final Widget mobileView;
+  final Widget tabView;
+  final Widget webView;
 
-  @override
-  State<Responsive> createState() => _ResponsiveState();
-}
-
-class _ResponsiveState extends State<Responsive> {
   @override
   Widget build(BuildContext context) {
-    ScreenType scrType = AppClass().getScreenType(context);
-    switch (scrType) {
+    switch (AppClass().getScreenType(context)) {
       case ScreenType.mobile:
-        return widget.mobileView;
+        return mobileView;
       case ScreenType.tab:
-        return widget.tabView;
+        return tabView;
       case ScreenType.web:
-        return widget.webView;
+        return webView;
     }
   }
 }

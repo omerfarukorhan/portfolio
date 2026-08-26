@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/resource/appClass.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
+import '../widget/social_links.dart';
 
 class ContactTab extends StatefulWidget {
   const ContactTab({Key? key}) : super(key: key);
@@ -28,14 +27,14 @@ class _ContactTabState extends State<ContactTab> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '''03.''',
+                    '''04.''',
                     style: TextStyle(
                         color: AppColors().neonColor,
                         fontSize: 14,
                         fontFamily: 'sfmono'),
                   ),
                   Text(
-                    ''' What's next?''',
+                    ''' Let's connect''',
                     style: TextStyle(
                         color: AppColors().neonColor,
                         fontSize: 16,
@@ -71,36 +70,10 @@ class _ContactTabState extends State<ContactTab> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 50, bottom: 70),
-                child: InkWell(
-                  onTap: () async {
-                    await launchUrl(Uri.parse(
-                                    "https://www.linkedin.com/in/omerfarukorhan/"));
-                  },
-                  child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.35,
-                    decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                        border: Border.all(
-                            color: AppColors().neonColor, width: 1.5)),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Text('Say Hello!',
-                            style: TextStyle(
-                                color: AppColors().neonColor,
-                                fontSize: 13,
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'sfmono')),
-                      ),
-                    ),
-                  ),
-                ),
-              )
+              const Padding(
+                padding: EdgeInsets.only(top: 38),
+                child: SocialLinks(),
+              ),
             ],
           ),
           Column(

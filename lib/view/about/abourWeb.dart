@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -179,8 +178,6 @@ class _AboutWebState extends ConsumerState<AboutWeb>
                   child: Column(
                     children: [
                       Consumer(builder: (context, ref, child) {
-                        var data = ref.watch(hoverProvider);
-                        bool isHovered = (data == "profilePic");
                         return Stack(
                           children: [
                             TweenAnimationBuilder<double>(

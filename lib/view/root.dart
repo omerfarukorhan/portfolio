@@ -6,6 +6,7 @@ import 'package:portfolio/resource/appClass.dart';
 import 'package:portfolio/view/about/about.dart';
 import 'package:portfolio/view/experience/experience.dart';
 import 'package:portfolio/view/intro/intro.dart';
+import 'package:portfolio/view/work/work.dart';
 import 'package:portfolio/view/widget/appBar.dart';
 import 'package:portfolio/view/widget/leftPane.dart';
 import 'package:portfolio/view/widget/rightPane.dart';
@@ -43,9 +44,9 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                  Color(0xff112240),
-                  Color(0xff0a192f),
-                  Color(0xff020c1b)
+                  Color(0xff102440),
+                  Color(0xff071426),
+                  Color(0xff020a15)
                 ])),
             height: AppClass().getMqHeight(context),
             child: Column(
@@ -88,6 +89,11 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                                     key: ValueKey(3),
                                     controller: aScrollController,
                                     index: 3,
+                                    child: const Work()),
+                                AutoScrollTag(
+                                    key: ValueKey(4),
+                                    controller: aScrollController,
+                                    index: 4,
                                     child: Contact())
                               ],
                             )),

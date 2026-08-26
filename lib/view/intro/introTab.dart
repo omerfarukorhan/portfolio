@@ -7,9 +7,9 @@ import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
 
 class IntroTab extends StatefulWidget {
-  AutoScrollController aScrollController;
+  final AutoScrollController aScrollController;
 
-  IntroTab(this.aScrollController, {Key? key}) : super(key: key);
+  const IntroTab(this.aScrollController, {super.key});
 
   @override
   State<IntroTab> createState() => _IntroTabState();
@@ -97,7 +97,7 @@ class _IntroTabState extends State<IntroTab> {
                 padding: const EdgeInsets.only(top: 30.0, bottom: 50),
                 child: InkWell(
                   onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
+                    widget.aScrollController.scrollToIndex(3,
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
@@ -109,7 +109,7 @@ class _IntroTabState extends State<IntroTab> {
                         border: Border.all(
                             color: AppColors().neonColor, width: 1.5)),
                     child: Center(
-                      child: Text('Check Out Me!',
+                      child: Text('View Selected Work',
                           style: TextStyle(
                               color: AppColors().neonColor,
                               fontSize: 13,

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/resource/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import '../model/workModel.dart';
 
 enum ScreenType { mobile, tab, web }
 
@@ -11,8 +8,7 @@ class AppClass {
   static BuildContext? lastContext;
   ScrollController controller = ScrollController();
 
-  static final resumeDownloadURL =
-      '''https://omerfaruk.dev/resume.pdf''';
+  static const resumePath = 'resume.pdf';
 
   factory AppClass() {
     return _mAppClass;
@@ -20,15 +16,15 @@ class AppClass {
 
   AppClass._internal();
 
-  getMqWidth(BuildContext context) {
+  double getMqWidth(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
 
-  getMqHeight(BuildContext context) {
+  double getMqHeight(BuildContext context) {
     return MediaQuery.of(context).size.height;
   }
 
-  showSnackBar(String msg, {BuildContext? context}) {
+  void showSnackBar(String msg, {BuildContext? context}) {
     ScaffoldMessenger.of(context ?? lastContext!)
         .showSnackBar(SnackBar(content: Text(msg)));
   }
@@ -43,8 +39,11 @@ class AppClass {
     return ScreenType.tab;
   }
 
-  downloadResume(context) async {
-    await launchUrl(Uri.parse(AppClass.resumeDownloadURL));
+  Future<bool> downloadResume(BuildContext context) {
+    return launchUrl(
+      Uri.base.resolve(AppClass.resumePath),
+      webOnlyWindowName: '_blank',
+    );
   }
 
   // alertDialog(context, title, msg) {

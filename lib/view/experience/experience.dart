@@ -21,6 +21,42 @@ class _ExperienceState extends State<Experience> {
   Widget build(BuildContext context) {
     List<ExperienceModel> experienceList = [
       ExperienceModel(
+        desig: Strings.expDesig4,
+        compName: Strings.expCompName4,
+        duration: Strings.expDur4,
+        points: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: AppColors().neonColor,
+                      size: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    width: AppClass().getMqWidth(context) * 0.5,
+                    child: Text(
+                      Strings.expAbout4,
+                      style: TextStyle(
+                          color: AppColors().textLight,
+                          letterSpacing: 1,
+                          height: 1.5,
+                          fontSize: 13,
+                          fontFamily: 'sfmono'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      ExperienceModel(
         desig: Strings.expDesig2,
         compName: Strings.expCompName2,
         duration: Strings.expDur2,
@@ -38,7 +74,7 @@ class _ExperienceState extends State<Experience> {
                       size: 20,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: AppClass().getMqWidth(context) * 0.5,
                     child: Text(
                       Strings.expAbout2,
@@ -56,7 +92,7 @@ class _ExperienceState extends State<Experience> {
           ],
         ),
       ),
-       ExperienceModel(
+      ExperienceModel(
         desig: Strings.expDesig3,
         compName: Strings.expCompName3,
         duration: Strings.expDur3,
@@ -74,7 +110,7 @@ class _ExperienceState extends State<Experience> {
                       size: 20,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: AppClass().getMqWidth(context) * 0.5,
                     child: Text(
                       Strings.expAbout3,
@@ -110,7 +146,7 @@ class _ExperienceState extends State<Experience> {
                       size: 20,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: AppClass().getMqWidth(context) * 0.5,
                     child: Text(
                       Strings.expAbout1,
