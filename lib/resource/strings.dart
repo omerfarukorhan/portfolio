@@ -3,8 +3,8 @@ class Strings {
   static const name = '''Omer Faruk.''';
   static const whatIdo = '''I build software with a physician's perspective.''';
   static const introAbout =
-      '''I’m a software developer and medical doctor working across product, backend, and mobile. I currently work as a medical doctor at ''';
-  static const currentOrgName = '''Ministry of Health.''';
+      '''I’m a software developer and medical doctor building dependable digital products across healthcare and technology.''';
+  static const currentOrgName = '''''';
 
   static const aboutPara1 =
       '''I am a software developer and medical doctor based in Malatya, Türkiye.''';
@@ -28,7 +28,7 @@ class Strings {
 
   static const expCompName2 = '''Avicenna İleri Teknoloji''';
   static const expDesig2 = '''Chief Technology Officer''';
-  static const expDur2 = '''Jul 2024 - Sep 2, 2026''';
+  static const expDur2 = '''Jul 2024 - Sep 2026''';
   static const expAbout2 =
       '''Leading technical direction and product development for accessible, human-centered software.''';
 
@@ -40,7 +40,7 @@ class Strings {
 
   static const expCompName4 = '''revolki GmbH''';
   static const expDesig4 = '''Full Stack Developer''';
-  static const expDur4 = '''Apr 2025 - Sep 2, 2026''';
+  static const expDur4 = '''Apr 2025 - Sep 2026''';
   static const expAbout4 =
       '''Building full-stack products and automation systems for German businesses with ASP.NET Core, PostgreSQL, Vue.js, and AI-enabled workflows.''';
 
